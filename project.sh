@@ -11,5 +11,5 @@ while true; do
     #if the user want to add flight cost then subtract them from the total budget
     if [ "$add_flight" = "yes" ];then
         read -p "Enter the flight ticket cost: " flight_cost
-        total_budget=$(("total_budget" - "$flight_cost"))
+        total_budget=$(("total_budget" - "flight_cost"))
     fi    
