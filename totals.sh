@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "🧮 Calculating total trip costs for all trips..."
+echo "Calculating total trip costs for all trips..."
 
 # Create or empty the temporary file to store updated trip data
 > trip_totals.txt
