@@ -1,6 +1,5 @@
 #!/bin/bash
 
-greet the user and explain how to use the program
 
 input_trip_data(){
   echo "Welcome to the travel budget planner :)"
@@ -21,10 +20,11 @@ input_trip_data(){
     read -p "Do you want to add flight cost? (y/n): " add_flight
 
     # optional add flight Ticket Cost
-    if [ "$add_flight" == "y" ]; then
-        read -p "Flight Ticket Cost (SAR): " flight_cost
+    if [ "$add_flight" = "yes" ];then
+        read -p "Enter the flight ticket cost: " flight_cost
+        
+        total_budget=$(("total_budget" - "flight_cost"))
     fi
-
     # Append data 
     echo "$destination,$months_left,$total_budget,$flight_cost" >> trip_data.txt
 

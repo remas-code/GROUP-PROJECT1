@@ -1,0 +1,11 @@
+===== Budget Plan Summary =====
+
+Destination: london
+Total Budget: 15400 SAR
+Months Until Trip: 5
+→ You need to save: 3080.00 SAR per month
+
+Destination: paris
+Total Budget: 6500 SAR
+Months Until Trip: 3
+→ You need to save: 2166.67 SAR per month
