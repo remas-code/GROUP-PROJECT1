@@ -5,6 +5,7 @@ echo "Calculating monthly savings for all trips..."
 # Clear the output file before writing new data
 > trip_savings.txt
 
+
 # Read the trip_data.txt file line by line, splitting by comma
 while read -r line; do
         destination=$(echo "$line" | cut -d',' -f1)
@@ -13,7 +14,17 @@ while read -r line; do
         flight_cost=$(echo "$line" | cut -d',' -f4)
         total=$(echo "$line" | cut -d',' -f5)
 
-    # Skip lines that are missing required fields
+
+#Read each line from trip.data.txt
+while true; do
+    echo "Welcome to the travel budget planner :)"
+    read -p "Enter the destination " destination
+    read -p "How many month until you travel? " month_left
+    read -p "Enter the total budget (in Riyals) " total_budget
+    read -p "Do you want to add flight expenses? (yes/no) " add_flight
+   
+ #Sikp empty or incomplate liines
+
     if [ -z "$destination" || -z "$months_left" || -z "$total" ]; then
         continue
     fi
@@ -32,7 +43,6 @@ done < trip_data.txt
 
 # Replace the original file with the updated one
 mv trip_savings.txt trip_data.txt
-
 
 echo "Monthly savings calculated and saved"
 
