@@ -16,16 +16,19 @@ while read -r line; do
     if [ -z "$destination" || -z "$months_left" || -z "$total" ]; then
         continue
     fi
-
-    # Initialize monthly saving variable
-    monthly=0
-
-    # Calculate monthly saving if months_left is greater than zero
+    
+   # Default flight_cost to 0 if empty
+   flight_cost=$((flight_cost:-0))
+    
+   #Calculate total cost including flight
+   total=$(( total_budget + flight_cost ))
+   
+    # Calculate monthly saving if months_left is greater than zero     
+    fi
     if [ "$months_left" -gt 0 ]; then
-        # Use awk to calculate and format to 2 decimal places
-        monthly=$(awk -v t="$total" -v m="$months_left" 'BEGIN { printf "%.2f", t / m }')
+        monthly=$(( total / months_left ))
     else
-        # If no time left, set monthly saving to "N/A"
+    # If no time left, set monthly saving to "N/A"
         monthly="N/A"
     fi
 
