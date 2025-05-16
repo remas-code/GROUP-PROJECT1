@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-echo "📆 Calculating monthly savings for all trips..."
+echo "Calculating monthly savings for all trips..."
 
 # Clear the output file before writing new data
 > trip_savings.txt
@@ -34,5 +34,5 @@ done < trip_data.txt
 mv trip_savings.txt trip_data.txt
 
 
-echo "✅ Monthly savings calculated and saved"
+echo "Monthly savings calculated and saved"
 
