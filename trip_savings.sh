@@ -6,7 +6,12 @@ echo "Calculating monthly savings for all trips..."
 > trip_savings.txt
 
 # Read the trip_data.txt file line by line, splitting by comma
-while IFS=',' read -r destination months_left total_budget flight_cost total; do
+while read -r line; do
+    # استخدم cut لتقسيم السطر على الفاصلة
+    destination=$(echo "$line" | cut -d',' -f1)
+    months_left=$(echo "$line" | cut -d',' -f2)
+    total_budget=$(echo "$line" | cut -d',' -f3)
+    flight_cost=$(echo "$line" | cut -d',' -f4)
 
     # Skip lines that are missing required fields
     if [ -z "$destination" || -z "$months_left" || -z "$total" ]; then
