@@ -17,13 +17,13 @@ input_trip_data(){
 
     read -p "How many months until you travel? " months_left
     read -p "Total Budget (SAR): " total_budget
-    read -p "Do you want to add flight cost? (y/n): " add_flight
+    read -p "Do you want to add flight cost? (yes/no): " add_flight
 
     # optional add flight Ticket Cost
     if [ "$add_flight" = "yes" ];then
         read -p "Enter the flight ticket cost: " flight_cost
         
-        total_budget=$(("total_budget" - "flight_cost"))
+        total_budget=$(("total_budget" + "flight_cost"))
     fi
     # Append data 
     echo "$destination,$months_left,$total_budget,$flight_cost" >> trip_data.txt

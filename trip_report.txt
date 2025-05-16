@@ -1,11 +1,6 @@
 ===== Budget Plan Summary =====
 
 Destination: japan
-Total Budget: 10000 SAR
-Months Until Trip: 6
-→ You need to save: 1666.67 SAR per month
-
-Destination: dubai
 Total Budget: 5000 SAR
-Months Until Trip: 3
-→ You need to save: 1666.67 SAR per month
+Months Until Trip: 7
+→ You need to save: 857.14 SAR per month
