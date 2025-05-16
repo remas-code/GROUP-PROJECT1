@@ -14,7 +14,7 @@ calculate_totals(){
 
     # Check if required fields are present
     if [ -z "$destination" ] || [ -z "$total_budget" ] || [ -z "$total_budget" ]; then
-      :
+      echo "Skipping incomplete record"
     else     
        flight_cost=${flight_cost:-0}
        total=$(awk -v b="$total_budget" -v f="$flight_cost" 'BEGIN { print b + f }')
