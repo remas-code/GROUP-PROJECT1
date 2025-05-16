@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # greet the user and explain how to use the program
+input_trip_data(){
 echo "Welcome to the travel budget planner :)"
 echo "Enter your trip information: "
 echo "Type 'no' as destination to stop entering data."
+> trip_data.txt 
 
 #loop to collect user trip info
 while true; do
@@ -23,10 +25,9 @@ while true; do
     fi
 
     # Append data 
-    echo "$destination,$months_left,$total_budget,$flight_cost" >> Trip_data.txt
+    echo "$destination,$months_left,$total_budget,$flight_cost" >> trip_data.txt
 
     echo "Trip data saved for $destination."
 done
 
-echo "All trip data saved to trip_data.txt"
-
+}
