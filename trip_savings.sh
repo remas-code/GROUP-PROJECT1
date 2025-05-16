@@ -7,7 +7,6 @@ echo "Calculating monthly savings for all trips..."
 
 # Read the trip_data.txt file line by line, splitting by comma
 while read -r line; do
-    # استخدم cut لتقسيم السطر على الفاصلة
     destination=$(echo "$line" | cut -d',' -f1)
     months_left=$(echo "$line" | cut -d',' -f2)
     total_budget=$(echo "$line" | cut -d',' -f3)
