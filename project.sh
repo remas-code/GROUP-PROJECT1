@@ -26,8 +26,8 @@ while true; do
        
        echo " Total : $total SAR "
        echo " You need to save monthly : $monthly_saving SAR "
-     
-echo "$destination,$month_left,$total_budget SAR,$flight_cost SAR,$total SAR,$monthly_saving SAR/month" >> budget_plan.txt
+       
+       echo "$destination,$month_left,$total_budget SAR,$flight_cost SAR,$total SAR,$monthly_saving SAR/month" >> budget_plan.txt
 
     echo ""
     echo "Financial summary:"
@@ -44,4 +44,6 @@ echo "$destination,$month_left,$total_budget SAR,$flight_cost SAR,$total SAR,$mo
         break
     fi
 done
+
+     
 
