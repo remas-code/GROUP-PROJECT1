@@ -30,7 +30,7 @@ calculate_saving() {
     # Append the updated data to the new file
 
         echo "$destination,$months_left,$total_budget,$flight_cost,$total,$monthly" >> trip_savings.txt
-    done < trip_data.txt
+        done < trip_data.txt
   
   # Replace the original file with the updated one
     mv trip_savings.txt trip_data.txt
@@ -38,11 +38,4 @@ calculate_saving() {
     echo "Monthly savings calculated."
 }
    
-
-    echo "$destination,$months_left,$total_budget,$flight_cost,$total,$monthly" >> trip_savings.txt
-done < trip_data.txt
-
-# Replace the original file with the updated one
-mv trip_savings.txt trip_data.txt
-
 
