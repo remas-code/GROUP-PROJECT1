@@ -17,7 +17,7 @@ while IFS=',' read -r destination months_left total_budget flight_cost total; do
     monthly=0
 
     # Calculate monthly saving if months_left is greater than zero
-    if [[ "$months_left" -gt 0 ]]; then
+    if [ "$months_left" -gt 0 ]; then
         # Use awk to calculate and format to 2 decimal places
         monthly=$(awk -v t="$total" -v m="$months_left" 'BEGIN { printf "%.2f", t / m }')
     else
