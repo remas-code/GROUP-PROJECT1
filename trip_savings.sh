@@ -9,7 +9,7 @@ echo "Calculating monthly savings for all trips..."
 while IFS=',' read -r destination months_left total_budget flight_cost total; do
 
     # Skip lines that are missing required fields
-    if [[ -z "$destination" || -z "$months_left" || -z "$total" ]]; then
+    if [ -z "$destination" || -z "$months_left" || -z "$total" ]; then
         continue
     fi
 

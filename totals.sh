@@ -7,7 +7,7 @@ echo "Calculating total trip costs for all trips..."
 # Read each line from the input file
 while read -r line; do
     # Skip empty lines
-    if [[ -z "$line" ]]; then
+    if [ -z "$line" ]; then
         continue
     fi
 
@@ -18,7 +18,7 @@ while read -r line; do
     flight_cost=$(echo "$line" | cut -d',' -f4)
 
     # Check if required fields are present
-    if [[ -z "$destination"-z "$total_budget" ]]; then
+    if [ -z "$destination"-z "$total_budget" ]; then
         continue
     fi
 
