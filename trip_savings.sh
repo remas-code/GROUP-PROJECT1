@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 echo "Calculating monthly savings for all trips..."
 
 # Clear the output file before writing new data
