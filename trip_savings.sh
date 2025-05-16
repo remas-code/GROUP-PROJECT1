@@ -24,7 +24,6 @@ while true; do
     read -p "Do you want to add flight expenses? (yes/no) " add_flight
    
  #Sikp empty or incomplate liines
-
     if [ -z "$destination" || -z "$months_left" || -z "$total" ]; then
         continue
     fi
