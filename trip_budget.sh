@@ -23,7 +23,7 @@ while true; do
     fi
 
     # Append data 
-    echo "$destination,$months_left,$total_budget,$flight_cost" >> trip_data.txt
+    echo "$destination,$months_left,$total_budget,$flight_cost" >> Trip_data.txt
 
     echo "Trip data saved for $destination."
 done
