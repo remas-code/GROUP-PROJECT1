@@ -27,4 +27,7 @@ calculate_saving() {
     mv trip_savings.txt trip_data.txt
     echo "Monthly savings calculated."
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e0435ea (edit)
