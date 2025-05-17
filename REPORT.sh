@@ -1,38 +1,30 @@
 #!/bin/bash
 
-# Function to generate a text report from the trip data
+# Function to print a clean summary report
 report() {
-    echo "Generating report..."
-    report_file="budget_plan.txt"
+    echo "===== Budget Plan Summary ====="
+    report_file="trip_summary.txt"
+    > "$report_file"
 
-    {
-        echo "----------------------------------------"
-        echo "           Travel Budget Report         "
-        echo "----------------------------------------"
-    } > "$report_file"
+    while read -r line; do
+        destination=$(echo "$line" | cut -d',' -f1)
+        months_left=$(echo "$line" | cut -d',' -f2)
+        total_budget=$(echo "$line" | cut -d',' -f3)
+        flight_cost=$(echo "$line" | cut -d',' -f4)
+        total=$(echo "$line" | cut -d',' -f5)
+        monthly=$(echo "$line" | cut -d',' -f6)
 
-    while IFS=',' read -r destination months_left total_budget flight_cost total monthly; do
-        if [ -z "$destination" ]; then
-            continue
+        if [ ! -z "$destination" ]; then
+            echo "" >> "$report_file"
+            echo "Destination: $destination" >> "$report_file"
+            echo "Total Budget: $total SAR" >> "$report_file"
+            echo "Months Until Trip: $months_left" >> "$report_file"
+            echo "→ You need to save: $monthly SAR per month" >> "$report_file"
         fi
-
-        {
-            echo "Destination     : $destination"
-            echo "Months Left     : $months_left"
-            echo "Total Budget    : $total_budget SAR"
-            echo "Flight Cost     : $flight_cost SAR"
-            echo "Total Trip Cost : $total SAR"
-            echo "Monthly Saving  : $monthly SAR"
-            echo "----------------------------------------"
-        } >> "$report_file"
     done < trip_data.txt
 
-    echo "Report saved in $report_file"
+    cat "$report_file"
     echo ""
-    echo "Financial summary:"
-    grep "SAR" "$report_file"
-    echo ""
-    echo "File permissions:"
-    ls -l "$report_file"
+    echo "Totals added and summary printed."
 }
 
