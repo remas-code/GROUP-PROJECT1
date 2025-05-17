@@ -2,9 +2,10 @@
 
 # Function to input trip data from the user
 input_trip_data() {
+    echo "Welcome to the travel budget planner :)"
     echo "Enter Trip Information"
     echo "Type 'no' as destination to stop entering data."
-    > trip_data.txt  
+    > trip_data.txt  # Clear existing data
 
     while true; do
         read -p "Travel Destination: " destination
