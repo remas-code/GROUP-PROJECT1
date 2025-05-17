@@ -4,7 +4,7 @@
 input_trip_data() {
     echo "Enter Trip Information"
     echo "Type 'no' as destination to stop entering data."
-    > trip_data.txt  # Clear existing data
+    > trip_data.txt  
 
     while true; do
         read -p "Travel Destination: " destination
