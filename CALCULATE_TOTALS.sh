@@ -24,4 +24,3 @@ calculate_totals() {
     mv trip_totals.txt trip_data.txt
     echo "Totals added."
 }
-
