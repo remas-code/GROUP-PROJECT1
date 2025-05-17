@@ -22,8 +22,11 @@ calculate_saving() {
             fi
             echo "$destination,$months_left,$total_budget,$flight_cost,$total,$monthly" >> trip_savings.txt
         fi
+
     done < trip_data.txt
 
     mv trip_savings.txt trip_data.txt
+
     echo "Monthly savings calculated."
 }
+
