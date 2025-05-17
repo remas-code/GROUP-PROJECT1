@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Function to calculate total cost per trip
+#Function to calculate total cost per trip
 calculate_totals() {
     echo "Calculating total trip costs..."
     > trip_totals.txt
