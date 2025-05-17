@@ -26,3 +26,24 @@ while true; do
        
        echo " Total : $total SAR "
        echo " You need to save monthly : $monthly_saving SAR "
+       
+       echo "$destination,$month_left,$total_budget SAR,$flight_cost SAR,$total SAR,$monthly_saving SAR/month" >> budget_plan.txt
+
+    echo ""
+    echo "Financial summary:"
+    grep "SAR" budget_plan.txt
+
+    echo ""
+    echo "File permissions for budget_plan.txt:"
+    ls -l budget_plan.txt
+
+    echo ""
+    read -p "Do you want to plan another trip? (y/n): " repeat
+    if [ "$repeat" != "y" ]; then
+        echo "Goodbye!"
+        break
+    fi
+done
+
+     
+
