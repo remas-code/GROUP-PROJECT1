@@ -22,7 +22,7 @@ calculate_saving() {
  
        #Calculate monthly saving if months_left is greater than zero  
         if [ "$months_left" -gt 0 ]; then
-            monthly=$(awk -v t="$total" -v m="$months_left" 'BEGIN { printf "%.2f", t / m }')
+            monthly=$(awk -v b="$total_budget" -v f="$flight_cost" -v m="$months_left" 'BEGIN { printf "%.2f", (b + f) / m }')
         else
             monthly="N/A" #If no time left, monthly saving is not available
         fi

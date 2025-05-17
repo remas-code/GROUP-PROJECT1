@@ -1,11 +1,6 @@
 ===== Budget Plan Summary =====
 
 Destination: japan
-Total Budget: 13600 SAR
+Total Budget: 10500 SAR
 Months Until Trip: 5
-→ You need to save: 3440.00 SAR per month
-
-Destination: london
-Total Budget: 15600 SAR
-Months Until Trip: 3
-→ You need to save: 6400.00 SAR per month
+→ You need to save: 3000.00 SAR per month
